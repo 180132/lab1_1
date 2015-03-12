@@ -14,4 +14,18 @@ import java.math.BigDecimal;
 public class Money {
     private String currency;
     private BigDecimal productPrice;
+
+    /**
+     * @return the currency
+     */
+    public String getCurrency() {
+        return currency;
+    }
+
+    /**
+     * @return the productPrice
+     */
+    public BigDecimal getProductPrice() {
+        return productPrice;
+    }
 }

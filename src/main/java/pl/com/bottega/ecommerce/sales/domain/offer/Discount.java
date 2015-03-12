@@ -12,4 +12,18 @@ package pl.com.bottega.ecommerce.sales.domain.offer;
 public class Discount {
     private Money discount;
     private String reason;
+
+    /**
+     * @return the discount
+     */
+    public Money getDiscount() {
+        return discount;
+    }
+
+    /**
+     * @return the reason
+     */
+    public String getReason() {
+        return reason;
+    }
 }
