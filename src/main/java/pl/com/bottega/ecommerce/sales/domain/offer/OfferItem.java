@@ -38,20 +38,17 @@ public class OfferItem {
         private ProductSnapshot productSnapshot;
 
 	// discount
-	private String discountCause;
-
-	private BigDecimal discount;
+	private Discount discount;
 
 	
 
-	public OfferItem( int quantity, BigDecimal discount, String discountCause) {
+	public OfferItem( int quantity, Discount discount) {
                 
                 this.productSnapshot = new ProductSnapshot();
 	
 
 		this.quantity = quantity;
 		this.discount = discount;
-		this.discountCause = discountCause;
 
 		BigDecimal discountValue = new BigDecimal(0);
 		if (discount != null)
