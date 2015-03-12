@@ -31,9 +31,9 @@ public class OfferItem {
 
 	private int quantity;
 
-	private BigDecimal totalCost;
+	private Money totalCost;
 
-	private String currency;
+	
         
         private ProductSnapshot productSnapshot;
 
@@ -63,7 +63,7 @@ public class OfferItem {
 
 
 
-	public BigDecimal getTotalCost() {
+	public Money getTotalCost() {
 		return totalCost;
 	}
 

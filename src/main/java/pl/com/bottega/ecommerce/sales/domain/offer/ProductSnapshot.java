@@ -15,7 +15,7 @@ import java.util.Date;
 public class ProductSnapshot {
     private String productName;
     private String productId;
-    private BigDecimal productPrice;
+    private Money productPrice;
     private Date productSnapshotDate;
     private String productType;
 
@@ -36,7 +36,7 @@ public class ProductSnapshot {
     /**
      * @return the productPrice
      */
-    public BigDecimal getProductPrice() {
+    public Money getProductPrice() {
         return productPrice;
     }
 
