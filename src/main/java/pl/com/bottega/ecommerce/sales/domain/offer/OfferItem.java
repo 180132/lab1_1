@@ -42,9 +42,9 @@ public class OfferItem {
 
 	
 
-	public OfferItem( int quantity, Discount discount) {
+	public OfferItem( int quantity, Discount discount, ProductSnapshot product) {
                 
-                this.productSnapshot = new ProductSnapshot();
+                this.productSnapshot = product;
 	
 
 		this.quantity = quantity;
@@ -52,10 +52,10 @@ public class OfferItem {
 
 		BigDecimal discountValue = new BigDecimal(0);
 		if (discount != null)
-			discountValue = discountValue.subtract(discount);
+			discountValue = discount.getDiscount().getProductPrice();
 
-		this.totalCost = productSnapshot.getProductPrice()
-				.multiply(new BigDecimal(quantity)).subtract(discountValue);
+		this.totalCost = new Money(productSnapshot.getProductPrice().getProductPrice()
+				.multiply(new BigDecimal(quantity)).subtract(discountValue));
 	}
 
 

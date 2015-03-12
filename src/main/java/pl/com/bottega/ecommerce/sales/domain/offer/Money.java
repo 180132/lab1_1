@@ -14,6 +14,10 @@ import java.math.BigDecimal;
 public class Money {
     private String currency;
     private BigDecimal productPrice;
+    
+    public Money(BigDecimal productPrice){
+        this.productPrice=productPrice;
+    }
 
     /**
      * @return the currency
