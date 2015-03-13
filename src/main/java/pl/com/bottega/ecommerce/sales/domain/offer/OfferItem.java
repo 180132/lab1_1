@@ -52,9 +52,9 @@ public class OfferItem {
 
 		BigDecimal discountValue = new BigDecimal(0);
 		if (discount != null)
-			discountValue = discount.getDiscount().getProductPrice();
+			discountValue = discount.getDiscount().getCost();
 
-		this.totalCost = new Money(productSnapshot.getProductPrice().getProductPrice()
+		this.totalCost = new Money(productSnapshot.getProductPrice().getCost()
 				.multiply(new BigDecimal(quantity)).subtract(discountValue));
 	}
 
@@ -64,17 +64,13 @@ public class OfferItem {
 		return totalCost;
 	}
 
-	public String getTotalCostCurrency() {
-		return currency;
-	}
+	
 
-	public BigDecimal getDiscount() {
+	public Discount getDiscount() {
 		return discount;
 	}
 
-	public String getDiscountCause() {
-		return discountCause;
-	}
+	
 
 	public int getQuantity() {
 		return quantity;
