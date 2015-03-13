@@ -52,7 +52,7 @@ private List<OfferItem> availabeItems = new ArrayList<OfferItem>();
 
 	private OfferItem findItem(String productId) {
 		for (OfferItem item : availabeItems){
-			if (item.getProductsnapshot.getProductId().equals(productId))
+			if (item.getProductSnapshot().getProductId().equals(productId))
 				return item;
 		}
 		return null;
